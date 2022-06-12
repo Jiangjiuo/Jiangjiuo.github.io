@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-06-12T14:03:19.500Z</updated>
+  <updated>2022-06-12T16:19:05.939Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2022/06/12/%E7%85%A7%E7%89%87/"/>
     <id>http://example.com/2022/06/12/%E7%85%A7%E7%89%87/</id>
     <published>2022-06-12T13:01:12.000Z</published>
-    <updated>2022-06-12T14:03:19.500Z</updated>
+    <updated>2022-06-12T16:19:05.939Z</updated>
     
     
       
@@ -37,8 +37,10 @@
     
     
     
+    <category term="相机📷参数" scheme="http://example.com/categories/%E7%9B%B8%E6%9C%BA%F0%9F%93%B7%E5%8F%82%E6%95%B0/"/>
     
-    <category term="清单" scheme="http://example.com/tags/%E6%B8%85%E5%8D%95/"/>
+    
+    <category term="设备清单" scheme="http://example.com/tags/%E8%AE%BE%E5%A4%87%E6%B8%85%E5%8D%95/"/>
     
   </entry>
   
