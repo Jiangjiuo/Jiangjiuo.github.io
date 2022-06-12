@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>长青</title>
+  
+  <subtitle>我有一个梦，也许有一天灿烂的阳光能照进黑暗森林</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-06-12T14:03:19.500Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>qing chang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>拍摄</title>
+    <link href="http://example.com/2022/06/12/%E7%85%A7%E7%89%87/"/>
+    <id>http://example.com/2022/06/12/%E7%85%A7%E7%89%87/</id>
+    <published>2022-06-12T13:01:12.000Z</published>
+    <updated>2022-06-12T14:03:19.500Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;拍摄设备&quot;&gt;拍摄设备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;松下 GX9&lt;/li&gt;
+&lt;li&gt;镜头 :松下14-140mm，小蚁12-40mm，松下25mm</summary>
+        
+      
+    
+    
+    
+    
+    <category term="清单" scheme="http://example.com/tags/%E6%B8%85%E5%8D%95/"/>
+    
+  </entry>
+  
+</feed>
