@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-31T13:36:09.269Z</updated>
+  <updated>2023-06-02T03:49:18.186Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>空气压缩</title>
+    <link href="http://example.com/2023/06/02/%E7%A9%BA%E6%B0%94%E5%8E%8B%E7%BC%A9/"/>
+    <id>http://example.com/2023/06/02/%E7%A9%BA%E6%B0%94%E5%8E%8B%E7%BC%A9/</id>
+    <published>2023-06-02T03:29:21.000Z</published>
+    <updated>2023-06-02T03:49:18.186Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;感受一下长焦200mm焦段的空间压缩感吧！！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+    <category term="长焦" scheme="http://example.com/tags/%E9%95%BF%E7%84%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>badusb</title>
+    <link href="http://example.com/2023/06/02/badusb/"/>
+    <id>http://example.com/2023/06/02/badusb/</id>
+    <published>2023-06-02T03:00:38.000Z</published>
+    <updated>2023-06-02T06:21:45.239Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;Arduino  Leonardo 制作badusb&lt;/h1&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    
+    <category term="硬件" scheme="http://example.com/tags/%E7%A1%AC%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>珠海</title>

