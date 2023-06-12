@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-06-02T03:49:18.186Z</updated>
+  <updated>2023-06-12T11:47:05.281Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>桂湾</title>
+    <link href="http://example.com/2023/06/12/%E6%A1%82%E6%B9%BE/"/>
+    <id>http://example.com/2023/06/12/%E6%A1%82%E6%B9%BE/</id>
+    <published>2023-06-12T03:33:25.000Z</published>
+    <updated>2023-06-12T11:47:05.281Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;20230611PM&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;配置📸：a7m4 + 70200gm2 f2.8&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;视频🫥&lt;/h1&gt;
+&lt;iframe</summary>
+        
+      
+    
+    
+    
+    
+    <category term="黄昏" scheme="http://example.com/tags/%E9%BB%84%E6%98%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>摄影技术点</title>
+    <link href="http://example.com/2023/06/08/%E6%91%84%E5%BD%B1%E6%8A%80%E6%9C%AF%E7%82%B9/"/>
+    <id>http://example.com/2023/06/08/%E6%91%84%E5%BD%B1%E6%8A%80%E6%9C%AF%E7%82%B9/</id>
+    <published>2023-06-08T01:31:56.000Z</published>
+    <updated>2023-06-08T01:58:44.804Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;摄影技术指南&lt;/h1&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+    <category term=" 摄影科普" scheme="http://example.com/tags/%E6%91%84%E5%BD%B1%E7%A7%91%E6%99%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>空气压缩</title>
@@ -47,7 +99,7 @@
     <link href="http://example.com/2023/06/02/badusb/"/>
     <id>http://example.com/2023/06/02/badusb/</id>
     <published>2023-06-02T03:00:38.000Z</published>
-    <updated>2023-06-02T06:21:45.239Z</updated>
+    <updated>2023-06-06T09:01:40.313Z</updated>
     
     
       
